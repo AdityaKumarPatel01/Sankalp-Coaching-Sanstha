@@ -204,16 +204,38 @@
        </div>
   </div>
   <div class="contact-form">
-    <form action="">
-      <input type="" placeholder="Enter your name" required>
+    <form onsumbit="sendEmail(); reset(); return false;">
+      <input type="name" placeholder="Enter your name" required>
       <input type="email" placeholder="enter your email" required>
 
-      <input type="" placeholder="enter your subject">
-      <textarea name="" id="" cols="40" rows="10" placeholder="Enter your subject"></textarea>
+      <input type="phone no" placeholder="enter your phone no">
+      <textarea name="subject" id="" cols="40" rows="10" placeholder="Enter your subject"></textarea>
       <class="sumbit" id="sumbit"></class>
     <input type="submit" value="submit" class="send">
     </form>
   </div>
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+      Email.send({
+    Host : "smtp.gmail.com",
+    Username : "adityakumar8122006@gmail.com",
+    Password : "Kunj@1234",
+    To : 'sankalpcoaching901@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+       + "<br> Email: " + document.getElementById("email").value
+       + "<br> phone no: " + document.getElementById("phone no").value
+       + "<br> subject: " + document.getElementById("subject").value
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+
+
+    }
+    
+  </script>
   
  </section>
  <div class="last-text">
