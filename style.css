@@ -237,7 +237,7 @@ body {
     background-color: transparent;
     padding: 40px;
     font-size: 13px;
-    font-weight: 13px;
+    font-weight: 15px;
     border-right: 10px;
     border-radius: 20px;
     transition: background 0.5s, tranform 0.5s;
